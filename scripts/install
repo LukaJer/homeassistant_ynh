@@ -108,7 +108,8 @@ chown -R $app: "$data_path"
 
 # installation in a virtual environment
 ynh_script_progression --message="Installing Home Assistant in a virtual environment..."
-ynh_exec_fully_quiet myynh_install_homeassistant
+wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
+dpkg -i homeassistant-supervised.deb
 
 #=================================================
 # NGINX CONFIGURATION
